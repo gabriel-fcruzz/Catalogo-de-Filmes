@@ -1,7 +1,7 @@
 // src/Header.js
 import React from "react";
 import Navbar from "./NavBar.jsx";
-import "../styles/Header.module.css";
+import "../styles/Header.css";
 
 const Header = () => {
   return (
