@@ -1,6 +1,6 @@
 // src/Main.js
 import React from "react";
-import MovieCard from "./Card.js";
+import MovieCard from "./Card.jsx";
 import "../styles/Main.css";
 
 const movies = [
