@@ -1,28 +1,30 @@
 // src/components/ToggleSwitch.js
 import React, { useState, useEffect } from "react";
-import Button from "./Button"; // Importando o Button
+import "../styles/ToggleSwitch.css"; // Estilos para o toggle
 
-const ToggleSwitch = () => {
-  const [isDarkMode, setIsDarkMode] = useState(() => {
-    const savedTheme = localStorage.getItem("theme");
-    return savedTheme === "dark";
-  });
+const ToggleSwitch = ({ onToggle }) => {
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
-  useEffect(() => {
-    document.body.classList.toggle("dark-mode", isDarkMode);
-    localStorage.setItem("theme", isDarkMode ? "dark" : "light");
-  }, [isDarkMode]);
-
-  const toggleDarkMode = () => {
-    setIsDarkMode((prevMode) => !prevMode);
+  // Toggla o modo claro/escuro
+  const handleToggle = () => {
+    setIsDarkMode(!isDarkMode);
+    onToggle(!isDarkMode); // Passa o novo estado para o componente pai
   };
 
+  useEffect(() => {
+    // Aplica o tema com base no estado do toggle
+    if (isDarkMode) {
+      document.body.classList.add("dark-mode");
+    } else {
+      document.body.classList.remove("dark-mode");
+    }
+  }, [isDarkMode]);
+
   return (
-    <div className="toggle-switch">
-      <Button onClick={toggleDarkMode} primary>
-        {isDarkMode ? "Modo Claro" : "Modo Escuro"}
-      </Button>
-    </div>
+    <label className="switch">
+      <input type="checkbox" checked={isDarkMode} onChange={handleToggle} />
+      <span className="slider"></span>
+    </label>
   );
 };
 

@@ -1,13 +1,19 @@
-// src/Header.js
+// src/components/Header.js
 import React from "react";
+import ToggleSwitch from "./ToggleSwitch";
 import Navbar from "./NavBar.jsx";
 import "../styles/Header.css";
 
 const Header = () => {
+  const handleThemeChange = (isDarkMode) => {
+    console.log(`Modo escuro: ${isDarkMode}`);
+  };
+
   return (
     <header>
-      <h1>Catálogo de Filmes</h1>
-      <Navbar />
+      <div className="header-content">
+        <Navbar />
+      </div>
     </header>
   );
 };
