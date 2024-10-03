@@ -5,7 +5,7 @@ import "../styles/Header.module.css";
 
 const Header = () => {
   return (
-    <header className={styles.header}>
+    <header>
       <h1>Catálogo de Filmes</h1>
       <Navbar />
     </header>
