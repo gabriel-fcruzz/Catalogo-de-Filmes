@@ -1,0 +1,74 @@
+/* src/styles/Navbar.css */
+
+nav {
+  background-color: #282c34; /* Cor de fundo da navbar */
+  padding: 10px;
+}
+
+.navbar {
+  display: flex; /* Usando flexbox para o layout da navbar */
+  justify-content: space-between; /* Espaça os itens ao longo da navbar */
+  align-items: center; /* Centraliza verticalmente os itens */
+}
+
+.logo {
+  color: white; /* Cor da logo */
+  width: 7rem; /* Tamanho da fonte da logo */
+}
+
+.hamburger {
+  color: white; /* Cor do ícone do menu hambúrguer */
+  font-size: 1.5rem; /* Tamanho do ícone do menu hambúrguer */
+  cursor: pointer; /* Cursor de ponteiro ao passar sobre o ícone */
+  display: none; /* Oculta o ícone do menu hambúrguer em telas grandes */
+}
+
+/* Estilos para a lista de links */
+.nav-links {
+  list-style-type: none; /* Remove os marcadores da lista */
+  padding: 0; /* Remove o padding padrão */
+  margin: 0; /* Remove a margem padrão */
+  display: flex; /* Exibe os links em linha */
+}
+
+/* Estilos dos itens da lista */
+.nav-links li {
+  color: white; /* Cor do texto dos links */
+  margin: 0 15px; /* Margem lateral entre os itens */
+  position: relative; /* Para posicionar o dropdown */
+  cursor: pointer; /* Cursor de ponteiro ao passar sobre os itens */
+}
+
+/* Dropdown */
+.dropdown-content {
+  display: none; /* Oculta o dropdown por padrão */
+  position: absolute; /* Permite que o dropdown se sobreponha aos outros itens */
+  background-color: #282c34; /* Cor de fundo do dropdown */
+  min-width: 100px; /* Largura mínima do dropdown */
+  z-index: 1; /* Coloca o dropdown acima dos outros elementos */
+}
+
+/* Exibe o dropdown ao passar o mouse */
+.dropdown:hover .dropdown-content {
+  display: block; /* Mostra o dropdown ao passar o mouse */
+}
+
+/* Estilos para telas pequenas */
+@media (max-width: 600px) {
+  .hamburger {
+    display: block; /* Exibe o ícone do menu hambúrguer em telas pequenas */
+  }
+
+  .nav-links {
+    display: none; /* Oculta os links em telas pequenas */
+    flex-direction: column; /* Organiza os links em coluna */
+    position: absolute; /* Permite que o menu se sobreponha ao conteúdo */
+    background-color: #282c34; /* Cor de fundo do menu */
+    width: 100%; /* Largura total da tela */
+    top: 50px; /* Alinha abaixo da navbar */
+  }
+
+  .nav-links.active {
+    display: flex; /* Mostra os links quando o menu está aberto */
+  }
+}

@@ -1,0 +1,77 @@
+/* src/styles.css */
+
+.movie-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  background-color: #fff;
+  max-width: 90%; /* Limite de largura para telas pequenas */
+  margin: 10px auto; /* Centraliza o card */
+  transition: transform 0.3s; /* Efeito de transição suave */
+}
+
+.movie-card:hover {
+  transform: scale(1.05); /* Efeito de aumento ao passar o mouse */
+}
+
+.movie-title {
+  font-size: 1.5em; /* Tamanho de fonte maior em dispositivos móveis */
+  margin: 12px 0;
+}
+
+.movie-poster {
+  max-width: 100%;
+  height: auto; /* Mantém a proporção da imagem */
+  border-radius: 8px;
+}
+
+.movie-rating {
+  font-size: 1em;
+  color: #ffcc00; /* Cor para as estrelas */
+  margin: 8px 0;
+}
+
+.movie-description {
+  font-size: 0.9em;
+  color: #333;
+  margin: 8px 0;
+}
+
+.movie-genres {
+  margin-top: 10px;
+}
+
+.genre-tag {
+  display: inline-block;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin: 5px;
+  font-size: 0.8em;
+}
+
+/* Estilos para telas maiores */
+@media (min-width: 600px) {
+  .movie-card {
+    max-width: 300px; /* Limite de largura para telas maiores */
+  }
+
+  .movie-title {
+    font-size: 1.8em; /* Aumenta o tamanho da fonte em telas maiores */
+  }
+
+  .movie-rating {
+    font-size: 1.1em; /* Aumenta o tamanho da fonte em telas maiores */
+  }
+
+  .movie-description {
+    font-size: 1em; /* Aumenta o tamanho da fonte em telas maiores */
+  }
+
+  .genre-tag {
+    font-size: 0.9em; /* Aumenta o tamanho das tags em telas maiores */
+  }
+}

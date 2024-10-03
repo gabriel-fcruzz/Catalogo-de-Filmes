@@ -1,0 +1,10 @@
+/* src/footer.css */
+
+footer {
+  background-color: #282c34;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  width: 100%; /* Faz o rodapé ocupar a largura total */
+  margin-top: auto; /* Faz o rodapé se mover para a parte inferior */
+}

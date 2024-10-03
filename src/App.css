@@ -1,0 +1,18 @@
+html,
+body {
+  height: 100%; /* Define a altura total para o html e o body */
+  margin: 0; /* Remove a margem padrão */
+}
+
+body.dark-mode {
+  background-color: #121212; /* Cor de fundo do modo escuro */
+  color: white; /* Cor do texto no modo escuro */
+}
+
+.navbar.dark-mode {
+  background-color: #1e1e1e; /* Cor de fundo da navbar no modo escuro */
+}
+
+.nav-links li.dark-mode {
+  color: #ffffff; /* Cor do texto dos links no modo escuro */
+}

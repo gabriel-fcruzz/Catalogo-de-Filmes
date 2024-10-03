@@ -1,0 +1,33 @@
+/* src/main.css */
+
+main {
+  padding: 10px;
+  flex: 1; /* Faz o main ocupar o espaço restante */
+  display: flex; /* Usando flexbox para o layout do main */
+  flex-direction: column; /* Organiza os filmes em coluna inicialmente */
+  align-items: center; /* Centraliza os itens */
+}
+
+/* Listagem de filmes */
+.movie-list {
+  display: flex; /* Usando flexbox para listagem de filmes */
+  flex-wrap: wrap; /* Permite que os cards quebrem para a linha seguinte */
+  justify-content: center; /* Centraliza os cards */
+  padding: 0;
+  margin: 10px 0;
+}
+
+.movie-list .movie-card {
+  margin: 10px; /* Espaço entre os cards */
+}
+
+/* Estilos para dispositivos maiores */
+@media (min-width: 600px) {
+  main {
+    padding: 20px; /* Aumenta o padding em telas maiores */
+  }
+
+  .movie-list .movie-card {
+    margin: 20px; /* Aumenta a margem entre os cards */
+  }
+}

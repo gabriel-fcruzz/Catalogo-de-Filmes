@@ -1,0 +1,48 @@
+/* src/styles/Header.css */
+
+header {
+  background-color: #282c34; /* Cor de fundo do header */
+  color: white; /* Cor do texto */
+  padding: 10px; /* Espaçamento interno */
+  text-align: center; /* Centraliza o texto */
+  width: 98%;
+}
+
+h1 {
+  margin: 0; /* Remove a margem padrão do h1 */
+  font-size: 1.8rem; /* Tamanho da fonte do título */
+}
+
+nav {
+  margin-top: 10px; /* Espaço entre o título e a navegação */
+}
+
+nav ul {
+  list-style-type: none; /* Remove os marcadores da lista */
+  padding: 0; /* Remove o padding padrão */
+  margin: 0; /* Remove a margem padrão */
+}
+
+nav ul li {
+  display: block; /* Faz cada item ocupar uma linha */
+  margin: 5px 0; /* Margem entre os itens */
+  color: #ffffff; /* Cor do texto padrão dos itens do menu */
+  transition: color 0.3s; /* Transição suave na cor */
+}
+
+/* Efeito hover para os itens do menu */
+nav ul li:hover {
+  color: #61dafb; /* Cor ao passar o mouse */
+}
+
+/* Estilos para dispositivos maiores */
+@media (min-width: 600px) {
+  nav ul li {
+    display: inline; /* Exibe os itens em linha em telas maiores */
+    margin: 0 15px; /* Margem lateral entre os itens */
+  }
+
+  header {
+    padding: 20px; /* Aumenta o padding em telas maiores */
+  }
+}
