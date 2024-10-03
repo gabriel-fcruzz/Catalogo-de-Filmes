@@ -1,13 +1,13 @@
-// src/components/Button.js
+// src/components/Button.jsx
 import React from "react";
-import "../styles/Button.css"; // Importando os estilos do botão
+import "../styles/Button.css"; // Importando os estilos específicos do botão
 
-const Button = ({ primary, size, onClick, children }) => {
-  const classNames = `button ${primary ? "primary" : ""} ${size}`;
+const Button = ({ text, onClick, primary, size }) => {
+  const btnClass = `${primary ? "btn-primary" : "btn-secondary"} ${size}`;
 
   return (
-    <button className={classNames} onClick={onClick}>
-      {children}
+    <button className={btnClass} onClick={onClick}>
+      {text}
     </button>
   );
 };
