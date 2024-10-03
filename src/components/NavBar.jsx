@@ -1,6 +1,6 @@
 // src/components/Navbar.js
 import React, { useState } from "react";
-import ToggleSwitch from "./ToggleSwitch.js"; // Importando o ToggleSwitch
+import ToggleSwitch from "./ToggleSwitch.jsx"; // Importando o ToggleSwitch
 import "../styles/NavBar.css";
 import { AiFillHome } from "react-icons/ai";
 
