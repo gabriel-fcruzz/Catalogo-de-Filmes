@@ -1,7 +1,7 @@
 /* src/styles/Header.module.css */
 
 header {
-  background-color: #282c34; /* Cor de fundo do header */
+  background-color: #282c34;
   color: white; /* Cor do texto */
   padding: 10px; /* Espaçamento interno */
   text-align: center; /* Centraliza o texto */
